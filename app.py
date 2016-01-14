@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     _ip = socket.gethostbyname(socket.gethostname())
-    _version = '1.1'
+    _version = '1.2'
     return 'ip: {0}\nversion: {1}'.format(_ip, _version)
 
 
