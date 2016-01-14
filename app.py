@@ -1,3 +1,4 @@
+import socket
 from flask import Flask
 
 
@@ -6,7 +7,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello World! 2'
+    _ip = socket.gethostbyname(socket.gethostname())
+    _version = '1.0'
+    return 'ip: {0}\nversion: {1}'.format(_ip, _version)
 
 
 if __name__ == "__main__":
